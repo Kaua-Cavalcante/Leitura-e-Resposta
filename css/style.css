@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 35%;
+    background-color: #222222;
+}
+
+.left-side .title {
+    font-family: 'Righteous', cursive;
+    font-size: 2.5rem;
+    color: #d3bffa;
+}
+
+main .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    position: relative;
+    width: 65%;
+    height: 100%;
+
+    background-color: #423a54;
+}
+
+.input-container {
+    position: relative;
+    margin: 30px;
+    width: 38%;
+    overflow: hidden;
+    padding: 10px 0 2px 0;
+}
+
+.form-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+}
+
+.form-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+    border-bottom: 2px solid #7e4ae6;
+    color: #dec9ff;
+
+    font-size: 17px;
+    font-weight: 700;
+}   
+
+.form-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #dec9ff;
+    transform: translate(-100%);
+    transition:  0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+
+.form .form-input:focus + .form-label .content-name,
+.form .form-input:valid + .form-label .content-name {
+    transform: translateY(-60%);
+    font-size: 14px;
+}
+
+.form .form-input:focus + .form-label::after,
+.form .form-input:valid + .form-label::after {
+    transform: translateX(0%);
+}
