@@ -13,7 +13,7 @@ body {
     height: 100vh;
 }
 
-main {
+section {
     display: flex;
     align-items: center;
     height: 100%;
@@ -35,7 +35,7 @@ main {
     color: #d3bffa;
 }
 
-main .form{
+section .form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +53,7 @@ main .form{
     margin: 30px;
     width: 38%;
     overflow: hidden;
-    padding: 10px 0 2px 0;
+    padding: 15px 0 2px 0;
 }
 
 .form-input {
@@ -129,4 +129,13 @@ button:hover {
     background-color: #222222;
     border-color: #222222;
     color: #ae86ff;
+}
+
+p {
+    margin-top: 70px;
+    padding: 8px 10px;
+    border-bottom: solid 3px #7e4ae6;
+    color: #dec9ff;
+
+    transition: all .3s ease-in-out;
 }
