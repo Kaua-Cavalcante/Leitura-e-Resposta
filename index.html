@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio JavaScript</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <section>
-        <div class="left-side">
-            <h1 class="title">Leitura e Resposta</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafios JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="leitura-resposta">
+      <div class="left-side">
+        <strong class="title">Leitura de Resposta</strong>
+      </div>
+      <div class="form">
+        <div class="input-container">
+          <input
+            type="text"
+            class="form-input"
+            id="nome"
+            autocomplete="off"
+            required
+          />
+          <label for="nome" class="form-label"
+            ><span class="content-name">Qual seu nome?</span></label
+          >
         </div>
-        <div class="form">
-            <div class="input-container">
-                <input type="text" class="form-input" id="nome" autocomplete="off" required>
-                <label for="nome" class="form-label"><span class="content-name">Qual seu nome?</span></label>
-            </div>
-            <div class="input-container">
-                <input type="number" class="form-input" id="idade" autocomplete="off" required>
-                <label for="idade" class="form-label"><span class="content-name">Quantos anos você tem?</span></label>
-            </div>
-            <div class="input-container">
-                <input type="text" class="form-input" id="linguagem" autocomplete="off" required>
-                <label for="linguagem" class="form-label"><span class="content-name">O que você está estudando?</span></label>
-            </div>
-            
-            <button id="resposta">Responder</button>
+        <div class="input-container">
+          <input
+            type="number"
+            class="form-input"
+            id="idade"
+            autocomplete="off"
+            required
+          />
+          <label for="idade" class="form-label"
+            ><span class="content-name">Quantos anos você tem?</span></label
+          >
+        </div>
+        <div class="input-container">
+          <input
+            type="text"
+            class="form-input"
+            id="linguagem"
+            autocomplete="off"
+            required
+          />
+          <label for="linguagem" class="form-label"
+            ><span class="content-name">O que você está estudando?</span></label
+          >
+        </div>
 
-            <p id="campo-resposta">Resposta</p>
+        <button id="botao1">Responder</button>
+
+        <p id="resposta1">Resposta</p>
+      </div>
+    </section>
+
+    <section class="loops">
+      <div class="right-side">
+        <strong class="title">Loops</strong>
+      </div>
+      <div class="form">
+        <div class="input-container">
+          <input
+            type="number"
+            class="form-input"
+            id="valor"
+            autocomplete="off"
+            required
+          />
+          <label for="valor" class="form-label"
+            ><span class="content-name">Digite um valor</span></label
+          >
         </div>
+
+        <button id="botao2">Responder</button>
+
+        <p id="resposta2">Quantidade de moedas</p>
+      </div>
     </section>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
