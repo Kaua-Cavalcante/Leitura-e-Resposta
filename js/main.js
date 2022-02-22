@@ -6,8 +6,10 @@ const nome = document.getElementById("nome"),
   valor = document.getElementById("valor"),
   res1 = document.getElementById("resposta1"),
   res2 = document.getElementById("resposta2"),
+  res3 = document.getElementById("resposta3"),
   botao1 = document.getElementById("botao1"),
-  botao2 = document.getElementById("botao2");
+  botao2 = document.getElementById("botao2"),
+  botao3 = document.getElementById("botao3");
 
 botao1.addEventListener("click", function () {
   if (nome.value === "" || idade.value === "" || linguagem.value === "") {
@@ -56,3 +58,12 @@ botao2.addEventListener("click", function () {
   res2.innerHTML += `<li> ${parseInt(moedaDez)} moeda(s) de R$0,10</li>`;
   res2.innerHTML += `<li> ${Math.round(moedaCinco)} moeda(s) de R$0,05</li>`;
 });
+
+
+botao3.addEventListener("click", function() {
+  const input = document.getElementById("campo");
+  let caracteres = document.getElementById("campo").value,
+  n = caracteres.length;
+
+  alert("O texto digitado tem" + n + "caracteres");
+})
