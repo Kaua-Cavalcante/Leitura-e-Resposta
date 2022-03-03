@@ -3,6 +3,7 @@
 const nome = document.getElementById("nome"),
   idade = document.getElementById("idade"),
   linguagem = document.getElementById("linguagem"),
+  frase = document.getElementById("frase"),
   valor = document.getElementById("valor"),
   res1 = document.getElementById("resposta1"),
   res2 = document.getElementById("resposta2"),
@@ -59,11 +60,32 @@ botao2.addEventListener("click", function () {
   res2.innerHTML += `<li> ${Math.round(moedaCinco)} moeda(s) de R$0,05</li>`;
 });
 
+botao3.addEventListener("click", function () {
+  let cPalavra = 0;
+  let cFrase = 0;
 
-botao3.addEventListener("click", function() {
-  const input = document.getElementById("campo");
-  let caracteres = document.getElementById("campo").value,
-  n = caracteres.length;
+  let fraseV = frase.value;
 
-  alert("O texto digitado tem" + n + "caracteres");
-})
+  for(let i = 0; i < fraseV.length; i++){
+    if(fraseV[i] === "." || fraseV[i] === "!" || fraseV[i] === "?"){
+      cFrase++;
+    }
+  }
+
+  fraseV.replace('.', '');
+  fraseV.replace('!', '');
+  fraseV.replace('?', '');
+
+  for(let i = 0; i < fraseV.length; i++){
+    if(fraseV[i] === " "){
+      cPalavra++;
+    }
+  }
+
+  res3.innerHTML += `<h2>${frase.value}</h2><br/>`;
+  res3.innerHTML += `<div>${nome.value} escreveu ${cFrase} frases,</div>`;
+  res3.innerHTML += `<div>num total de ${cPalavra} palavras.</div>`;
+});
+
+
+  
